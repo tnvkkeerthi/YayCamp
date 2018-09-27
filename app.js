@@ -11,13 +11,15 @@ var express = require("express"),
     User        = require("./models/user"),
     seedDB      = require("./seeds");
  
-//requring routes  
+//requring routes 
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index");
        
     
-mongoose.connect('mongodb://localhost:27017/Yaycamp_v12', { useNewUrlParser: true });    
+// mongoose.connect('mongodb://localhost:27017/Yaycamp_v12', { useNewUrlParser: true }); 
+mongoose.connect('mongodb://mydb:mydb12@ds151382.mlab.com:51382/yaycamp', { useNewUrlParser: true });  
+
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
