@@ -18,8 +18,8 @@ var commentRoutes    = require("./routes/comments"),
        
 
 // mongoose.connect('mongodb://localhost:27017/Yaycamp_v12', { useNewUrlParser: true }); 
-//mongoose.connect('mongodb://mydb:mydb12@ds151382.mlab.com:51382/yaycamp', { useNewUrlParser: true });
-mongoose.connect(process.env.DATABASEURL , { useNewUrlParser: true });
+mongoose.connect('mongodb://mydb:mydb12@ds151382.mlab.com:51382/yaycamp', { useNewUrlParser: true });
+//mongoose.connect(process.env.DATABASEURL , { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static(__dirname + "/public"));
